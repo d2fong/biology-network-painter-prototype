@@ -31,11 +31,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <input id="file-input" type="file" style="display:none" />
-                                <li><a href="#" type="file" id="load-file">Load...</a></li>
+                                <li><a href="#" type="file" id="load-file">Load File</a></li>
                                 <li class="dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        Samples
-                                        <!--<b class="right-caret"></b>-->
+                                        Load Sample
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#" id="load-sample1">Neuronal muscle signaling</a></li>
@@ -49,7 +48,7 @@
                                         <li><a href="#" id="load-sample9">Vitamins B6 activation to pyridoxal phosphate</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#" id="save-as-sbgnml">Save...</a></li>
+                                <li><a href="#" id="save-as-sbgnml">Save</a></li>
                                 <li class="dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         Save as Image
@@ -69,7 +68,6 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" id="highlight-search-menu-item">Search ...</a></li>
                                 <li><a href="#" id="highlight-neighbors-of-selected">Neighbors of Selected</a></li>
                                 <li><a href="#" id="highlight-processes-of-selected">Processes of Selected</a></li>
                                 <li><a href="#" id="remove-highlights">Remove Highlights</a></li>
@@ -83,19 +81,11 @@
 
         <div id="sbgn-toolbar" style="margin-top: 10px;">
             <table width="100%" height="100%" align="center" valign="center">
-                <tr>
-                <div class="inside-menu">
-                <img id="load-file-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/load.png" title="Load: Load an SBGN-PD map from SBGN-ML file">
-                <img id="save-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/save.png" title="Save: Save current SBGN-PD map to an SBGN-ML file">
-                <img id="properties-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/properties.png" title="Properties: Modify general properties of current SBGN-PD map" >
-                </div>
 
                 <div class="menu-break-large sbgn-toolbar-element">&nbsp</div>
                 <div class="inside-menu">
                 <img id="search-by-label-icon" class="sbgn-toolbar-element" src="sampleapp-images/search.png" title="Search: Search and find (case insensitive) all nodes with specified label text, selecting them and highlighting them along with their processes" >
                 <input id="search-by-label-text-box" class="sbgn-toolbar-element" type="label">
-                <img id="highlight-neighbors-of-selected-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/highlightneighborsofselected.png" title="Highlight Neighbors of Selected: Highlight selected nodes and their neighbors by ghosting remaining nodes" >
-                <img id="remove-highlights-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/removehighlights.png" title="Remove Highlights: Remove any highlights" >
                 </div>
 
                 <div class="menu-break-large sbgn-toolbar-element">&nbsp</div>

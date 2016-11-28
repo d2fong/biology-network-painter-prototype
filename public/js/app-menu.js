@@ -5,7 +5,7 @@ var appUtilities = require('./app-utilities');
 // Handle sbgnviz menu functions which are to be triggered on events
 module.exports = function () {
   var dynamicResize = appUtilities.dynamicResize.bind(appUtilities);
-  
+
   var layoutPropertiesView, generalPropertiesView, pathsBetweenQueryView;
 
   function loadSample(filename) {
@@ -28,12 +28,12 @@ module.exports = function () {
     dynamicResize();
 
   });
-  
+
   // Events triggered by sbgnviz module
   $(document).on('sbgnvizLoadSample sbgnvizLoadFile', function(event, filename) {
     appUtilities.setFileContent(filename);
   });
-  
+
   $(document).on('sbgnvizUpdateEnd', function(event) {
     appUtilities.resetUndoRedoButtons();
   });
@@ -50,26 +50,6 @@ module.exports = function () {
         sbgnviz.loadSBGNMLFile(file);
         $(this).val("");
       }
-    });
-
-    $("#node-legend").click(function (e) {
-      e.preventDefault();
-      $("#node_legend_modal").modal('show');
-    });
-
-    $("#edge-legend").click(function (e) {
-      e.preventDefault();
-      $("#edge_legend_modal").modal('show');
-    });
-
-    $("#quick-help").click(function (e) {
-      e.preventDefault();
-      $("#quick_help_modal").modal('show');
-    });
-
-    $("#about").click(function (e) {
-      e.preventDefault();
-      $("#about_modal").modal('show');
     });
 
     var selectorToSampleFileName = {
@@ -95,7 +75,7 @@ module.exports = function () {
     $("#hide-selected, #hide-selected-icon").click(function(e) {
       sbgnviz.hideEles(cy.elements(":selected"));
     });
-    
+
     $("#show-selected, #show-selected-icon").click(function(e) {
       sbgnviz.showEles(cy.elements(":selected"));
     });
@@ -176,10 +156,10 @@ module.exports = function () {
 
     $("#perform-layout, #perform-layout-icon").click(function (e) {
       // TODO think whether here is the right place to start the spinner
-      sbgnviz.startSpinner("layout-spinner"); 
-      
+      sbgnviz.startSpinner("layout-spinner");
+
       // If 'animate-on-drawing-changes' is false then animate option must be 'end' instead of false
-      // If it is 'during' use it as is 
+      // If it is 'during' use it as is
       var preferences = {
         animate: appUtilities.getSbgnProperties().animateOnDrawingChanges ? 'end' : false
       };

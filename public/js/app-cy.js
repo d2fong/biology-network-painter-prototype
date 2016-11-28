@@ -156,19 +156,6 @@ module.exports = function () {
         }
       }
     });
-
-    var panProps = ({
-      fitPadding: 10,
-      fitSelector: ':visible',
-      animateOnFit: function () {
-        return appUtilities.getSbgnProperties().animateOnDrawingChanges;
-      },
-      animateOnZoom: function () {
-        return appUtilities.getSbgnProperties().animateOnDrawingChanges;
-      }
-    });
-
-    appUtilities.sbgnNetworkContainer.cytoscapePanzoom(panProps);
   }
 
   function bindCyEvents() {
