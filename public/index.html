@@ -64,38 +64,19 @@
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Highlight
+                                Paint
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" id="highlight-neighbors-of-selected">Neighbors of Selected</a></li>
                                 <li><a href="#" id="highlight-processes-of-selected">Processes of Selected</a></li>
-                                <li><a href="#" id="remove-highlights">Remove Highlights</a></li>
+                                <li><a href="#" id="remove-highlights">Remove Paint</a></li>
                             </ul>
                         </li>
                     </ul>
                     <span class="input-file" id="file-name"></span>
                 </div>
             </nav>
-        </div>
-
-        <div id="sbgn-toolbar" style="margin-top: 10px;">
-            <table width="100%" height="100%" align="center" valign="center">
-
-                <div class="menu-break-large sbgn-toolbar-element">&nbsp</div>
-                <div class="inside-menu">
-                <img id="search-by-label-icon" class="sbgn-toolbar-element" src="sampleapp-images/search.png" title="Search: Search and find (case insensitive) all nodes with specified label text, selecting them and highlighting them along with their processes" >
-                <input id="search-by-label-text-box" class="sbgn-toolbar-element" type="label">
-                </div>
-
-                <div class="menu-break-large sbgn-toolbar-element">&nbsp</div>
-                <div class="inside-menu">
-                <img id="perform-layout-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/layout-cose.png" title="Perform Layout: Perform a force-directed layout of current map, maintaining compound structures" >
-                <img id="layout-properties-icon" class="sbgn-toolbar-element" src="sampleapp-images/toolbar-icons/layoutproperties.png" title="Layout Properties: Modify parameters used during layout" >
-                </div>
-                </tr>
-
-            </table>
         </div>
 
         <div id="sbgn-network-container">
@@ -384,61 +365,5 @@
             </div>
         </script>
 
-        <!-- BioGeneView template for backbone.js -->
-        <script type="text/template" id="biogene-template">
-            <div class='node-details-text'>
-            <table class="table table-condensed table-striped" cellspacing="10">
-            <tr class="biogene-info biogene-description node-details-summary">
-            <th valign="top">Gene Summary:</th>
-            <td colspan="2" class="expandable">
-            <%=geneSummary %>
-            </td>
-            </tr>
-            <tr class="biogene-info biogene-aliases">
-            <th valign="top">Aliases:</th>
-            <td>
-            <%=geneAliases %>
-            </td>
-            </tr>
-            <tr class="biogene-info biogene-description">
-            <th>Description:</th>
-            <td class="expandable">
-            <%=geneDescription %>
-            </td>
-            </tr>
-            <tr class="biogene-info biogene-location">
-            <th valign="top">Chromosome Location:</th>
-            <td>
-            <%=geneLocation %>
-            </td>
-            </tr>
-            <tr class="biogene-info biogene-uniprot-links">
-            <th valign="top">UniProt ID:</th>
-            <td>
-            <a href='http://www.uniprot.org/uniprot/<%= geneUniprotId %>' target='blank'>
-            <%=geneUniprotId %>
-            </a>
-            <span class='biogene-uniprot-links-extra'>
-            <%= geneUniprotLinks %>
-            </span>
-            </td>
-            </tr>
-            <tr class="biogene-info biogene-id">
-            <th valign="top">Gene ID:</th>
-            <td>
-            <a href='http://www.ncbi.nlm.nih.gov/gene?term=<%= geneId %>' target='blank'>
-            <%=geneId %>
-            </a>
-            </td>
-            </tr>
-            </table>
-            </div>
-        </script>
-
-        <script type="text/template" id="uniprot-link-template">
-            <a href="http://www.uniprot.org/uniprot/<%= id %>" target="_blank">
-            <%=id %>
-            </a>
-        </script>
     </body>
 </html>
