@@ -7,6 +7,15 @@ This is prototype code for the sbgn viewer project.
 To explore how to use sbgnviz.js as a client app
 Test out features using prototype code
 
-## Contributors
+## How to use this
 
-iVis-at-Bilkent for creating the sbgnviz repo and the sample app template that this is based on 
+Run
+```sh
+npm install
+```
+
+```sh
+npm run debug-build
+```
+
+Go to localhost:3000 in your browser
