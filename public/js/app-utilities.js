@@ -79,11 +79,11 @@ var appUtilities = {
   },
   nodeQtipFunction: function (node) {
     var qtipContent = sbgnviz.getQtipContent(node);
-    
+
     if (!qtipContent) {
       return;
     }
-    
+
     node.qtip({
       content: function () {
         return qtipContent;

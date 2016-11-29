@@ -72,35 +72,12 @@ module.exports = function () {
       })(selector);
     }
 
-    $("#hide-selected, #hide-selected-icon").click(function(e) {
-      sbgnviz.hideEles(cy.elements(":selected"));
-    });
-
-    $("#show-selected, #show-selected-icon").click(function(e) {
-      sbgnviz.showEles(cy.elements(":selected"));
-    });
-
-    $("#show-all").click(function (e) {
-      sbgnviz.showAll();
-    });
-
     $("#delete-selected-smart, #delete-selected-smart-icon").click(function (e) {
       sbgnviz.deleteElesSmart(cy.elements(':selected'));
     });
 
     $("#highlight-neighbors-of-selected, #highlight-neighbors-of-selected-icon").click(function (e) {
       sbgnviz.highlightNeighbours(cy.elements(':selected'));
-    });
-
-    $("#search-by-label-icon").click(function (e) {
-      var label = $("#search-by-label-text-box").val().toLowerCase();
-      sbgnviz.searchByLabel(label);
-    });
-
-    $("#search-by-label-text-box").keydown(function (e) {
-      if (e.which === 13) {
-        $("#search-by-label-icon").trigger('click');
-      }
     });
 
     $("#highlight-search-menu-item").click(function (e) {
@@ -113,22 +90,6 @@ module.exports = function () {
 
     $("#remove-highlights, #remove-highlights-icon").click(function (e) {
       sbgnviz.removeHighlights();
-    });
-
-    $("#layout-properties, #layout-properties-icon").click(function (e) {
-      layoutPropertiesView.render();
-    });
-
-    $("#delete-selected-simple, #delete-selected-simple-icon").click(function (e) {
-      sbgnviz.deleteElesSimple(cy.elements(':selected'));
-    });
-
-    $("#sbgn-properties, #properties-icon").click(function (e) {
-      generalPropertiesView.render();
-    });
-
-    $("#query-pathsbetween").click(function (e) {
-      pathsBetweenQueryView.render();
     });
 
     $("#collapse-selected,#collapse-selected-icon").click(function (e) {

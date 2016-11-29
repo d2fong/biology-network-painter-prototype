@@ -347,7 +347,7 @@ var PathsBetweenQueryView = Backbone.View.extend({
     $(self.el).html(self.template);
 
     $(self.el).modal('show');
-    
+
     $("#query-pathsbetween-enable-shortest-k-alteration").change(function (e) {
       if (document.getElementById("query-pathsbetween-enable-shortest-k-alteration").checked) {
         $("#query-pathsbetween-shortest-k").prop("disabled", false);
@@ -394,10 +394,6 @@ var PathsBetweenQueryView = Backbone.View.extend({
         }
       });
 
-      $(self.el).modal('toggle');
-    });
-
-    $(document).off("click", "#cancel-query-pathsbetween").on("click", "#cancel-query-pathsbetween", function (evt) {
       $(self.el).modal('toggle');
     });
 

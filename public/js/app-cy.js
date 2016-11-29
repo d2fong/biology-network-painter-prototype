@@ -39,48 +39,6 @@ module.exports = function () {
 
     contextMenus.appendMenuItems([
       {
-        id: 'ctx-menu-sbgn-properties',
-        title: 'Properties...',
-        coreAsWell: true,
-        onClickFunction: function (event) {
-          $("#sbgn-properties").trigger("click");
-        }
-      },
-      {
-        id: 'ctx-menu-delete',
-        title: 'Delete',
-        selector: 'node, edge',
-        onClickFunction: function (event) {
-          cy.undoRedo().do("deleteElesSimple", {
-            eles: event.cyTarget
-          });
-        }
-      },
-      {
-        id: 'ctx-menu-delete-selected',
-        title: 'Delete Selected',
-        onClickFunction: function () {
-          $("#delete-selected-simple").trigger('click');
-        },
-        coreAsWell: true // Whether core instance have this item on cxttap
-      },
-      {
-        id: 'ctx-menu-hide-selected',
-        title: 'Hide Selected',
-        onClickFunction: function () {
-          $("#hide-selected").trigger('click');
-        },
-        coreAsWell: true // Whether core instance have this item on cxttap
-      },
-      {
-        id: 'ctx-menu-show-all',
-        title: 'Show All',
-        onClickFunction: function () {
-          $("#show-all").trigger('click');
-        },
-        coreAsWell: true // Whether core instance have this item on cxttap
-      },
-      {
         id: 'ctx-menu-expand', // ID of menu item
         title: 'Expand', // Title of menu item
         // Filters the elements to have this menu item on cxttap
@@ -110,14 +68,6 @@ module.exports = function () {
         },
         coreAsWell: true // Whether core instance have this item on cxttap
       },
-      {
-        id: 'ctx-menu-biogene-properties',
-        title: 'BioGene Properties',
-        selector: 'node[sbgnclass="macromolecule"],[sbgnclass="nucleic acid feature"],[sbgnclass="unspecified entity"]',
-        onClickFunction: function (event) {
-          bioGeneQtip(event.cyTarget);
-        }
-      }
     ]);
 
     cy.clipboard({
