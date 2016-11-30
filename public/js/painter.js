@@ -59,12 +59,9 @@ painter.colorChooser = function () {};
 // apply the color to the nodes in the graph
 painter.applyColors = function (colorMap) {
   var cy = painter.getCy();
-  // console.log(cy);
   colorMap.map(function (entry) {
     cy.nodes('#' + entry.id).style({'background-color': entry.color});
   });
-
-  // cy.style(colorMap);
 };
 
 module.exports = painter;
