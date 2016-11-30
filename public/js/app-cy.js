@@ -53,7 +53,7 @@ module.exports = function () {
       {
         id: 'ctx-menu-collapse',
         title: 'Collapse',
-        selector: 'node[expanded-collapsed!="collapsed"][sbgnclass="complex"],[expanded-collapsed!="collapsed"][sbgnclass="compartment"]',
+        selector: 'node[expanded-collapsed!="collapsed"][class="complex"],[expanded-collapsed!="collapsed"][class="compartment"]',
         onClickFunction: function (event) {
           cy.undoRedo().do("collapse", {
             nodes: event.cyTarget
