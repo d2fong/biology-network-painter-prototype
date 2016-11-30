@@ -1,6 +1,7 @@
 var jQuery = $ = require('jQuery');
 var BackboneViews = require('./backbone-views');
 var appUtilities = require('./app-utilities');
+var painter = require('./painter');
 
 // Handle sbgnviz menu functions which are to be triggered on events
 module.exports = function () {
@@ -48,6 +49,34 @@ module.exports = function () {
       if ($(this).val() != "") {
         var file = this.files[0];
         sbgnviz.loadSBGNMLFile(file);
+        $(this).val("");
+      }
+    });
+
+    $('#graph-load').click(function () {
+      $('#graph-input').trigger('click');
+    });
+
+    $('#graph-input').change(function () {
+      if ($(this).val() != "") {
+        var file = this.files[0];
+        sbgnviz.loadSBGNMLFile(file);
+        $(this).val("");
+      }
+    });
+
+    $('#data-load').click(function () {
+      $('#data-input').trigger('click');
+    });
+
+    $('#data-input').change(function () {
+      if ($(this).val() != "") {
+        var file = this.files[0];
+        // painter.visualizeData(file);
+        var data = painter.generateRandomWellFormedData();
+        var colorMap = painter.mapColors(data);
+        // console.log(colorMap);
+        painter.applyColors(colorMap);
         $(this).val("");
       }
     });
