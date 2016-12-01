@@ -7,8 +7,8 @@ require('jquery-expander')($);
 require('bootstrap');
 
 var appUtilities = require('./js/app-utilities');
-var appCy = require('./js/app-cy');
-var appMenu = require('./js/app-menu');
+var loadApp = require('./js/app-cy');
+var loadData = require('./js/app-menu');
 
 // Get cy extension instances
 var cyPanzoom = require('cytoscape-panzoom');
@@ -44,18 +44,18 @@ sbgnviz({
   imgPath: '../node_modules/sbgnviz/src/img',
   // whether to fit label to nodes
   fitLabelsToNodes: function () {
-    return appUtilities.getGeneralProperties().fitLabelsToNodes;
+    return false;
   },
   // dynamic label size it may be 'small', 'regular', 'large'
   dynamicLabelSize: function () {
-    return appUtilities.getGeneralProperties().dynamicLabelSize;
+    return 'small';
   },
   // percentage used to calculate compound paddings
   compoundPadding: function () {
-    return appUtilities.getGeneralProperties().compoundPadding;
+    return 10;
   },
   undoable: true
 }, libs);
 
-appCy();
-appMenu();
+loadApp();
+loadData();

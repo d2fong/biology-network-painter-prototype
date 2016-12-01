@@ -5,18 +5,18 @@ var appUtilities = {
   layoutPropertiesView: undefined,
   generalPropertiesView: undefined,
   pathsBetweenQueryView: undefined,
-  getLayoutProperties: function() {
-    if (this.layoutPropertiesView === undefined) {
-      return undefined;
-    }
-    return this.layoutPropertiesView.currentLayoutProperties;
-  },
-  getGeneralProperties: function() {
-    if (this.generalPropertiesView === undefined) {
-      return undefined;
-    }
-    return this.generalPropertiesView.currentSBGNProperties;
-  },
+  // getLayoutProperties: function() {
+  //   if (this.layoutPropertiesView === undefined) {
+  //     return undefined;
+  //   }
+  //   return this.layoutPropertiesView.currentLayoutProperties;
+  // },
+  // getGeneralProperties: function() {
+  //   if (this.generalPropertiesView === undefined) {
+  //     return undefined;
+  //   }
+  //   return this.generalPropertiesView.currentSBGNProperties;
+  // },
   setFileContent: function (fileName) {
     var span = document.getElementById('file-name');
     while (span.firstChild) {
@@ -81,13 +81,13 @@ var appUtilities = {
     if (node.renderedStyle("label") == node.data("label") && node.data("statesandinfos").length == 0 && node.data("class") != "complex") {
       return;
     }
-    
+
     var qtipContent = sbgnviz.getQtipContent(node);
-    
+
     if (!qtipContent) {
       return;
     }
-    
+
     node.qtip({
       content: function () {
         return qtipContent;
